@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Read Gradebook</title>
+<style>
+input:focus {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+<div style="padding-left:5px;font-family: monospace;font-size: 18px;">
+<br><br><a href="index.html">HOME</a><br>
+<a href="CRUD_options_instructor.html">Instructor HOME</a><br><br>
+</div>
+	<div style="padding-left:120px;font-family: monospace;">
+		<h2>Pass in Student ID to access specific Students gradebook or pass "ALL" to access complete gradebook</h2>
+		<form action="rest/gradebook" method="POST">
+			<div style="width: 200px; text-align: left;">
+				<div style="padding:10px;">
+					Enter Student ID or ALL (mandatory field) : <input name="student_id_ins"  type="text" required />
+				</div>
+
+				<div style="padding:10px;text-align:center">
+					<input type="submit" value="Submit" />
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

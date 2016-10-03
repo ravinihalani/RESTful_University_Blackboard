@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Gradebook</title>
+<style>
+input:focus {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+<div style="padding-left:5px;font-family: monospace;font-size: 18px;">
+<br><br><a href="index.html">HOME</a><br>
+<a href="CRUD_options_student.html">Student HOME</a><br><br>
+</div>
+	<div style="padding-left:120px;font-family: monospace;">
+		<h2>Please feed in your Student ID</h2>
+		<form action="rest/gradebook" method="POST">
+			<div style="width: 200px; text-align: left;">
+				<div style="padding:10px;">
+					Student ID* : <input name="student_id_mygradebook"  type="number" required min=0 oninput="validity.valid||(value='');"/>
+				</div>
+
+				<div style="padding:10px;text-align:center">
+					<input type="submit" value="Submit" />
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

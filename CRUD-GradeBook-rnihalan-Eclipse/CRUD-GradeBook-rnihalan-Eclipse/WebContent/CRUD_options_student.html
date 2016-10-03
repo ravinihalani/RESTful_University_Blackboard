@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+ <!--<head><meta charset="UTF-8" http-equiv="refresh" content="0; url=CRUD-GradeBook-rnihalan-Netbeans/AddNew.html" /><title></title></head> -->
+<head>
+<style>
+input:focus {
+    background-color: yellow;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+<script type="text/javascript">
+ function idForm(){
+   var selectvalue = $('input[name=choice]:checked', '#idForm').val();
+if(selectvalue == "read" ){
+window.open('MyGradebook.html','_self');
+return true;
+}
+else if(selectvalue == "update" ){
+window.open('AppealGrade.html','_self');
+return true;
+}
+return false;
+};
+</script>
+</head>
+<body><br><br>
+<div style="padding-left:10px;font-family: monospace;font-size: 25px;">
+<a href="index.html">HOME</a>
+</div>
+<div style="padding-left:100px;font-family: monospace;">
+<h2> STUDENT MODE ACTIVATED ! <br><br><br><u>Please choose the operation you want to perform</u> :<br /><br />
+<form id="idForm">1. READ : <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio"  onclick="idForm()" name="choice" value="read"/>&nbsp;Check your gradebook &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<br>2. UPDATE :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio"  onclick="idForm()" name="choice" value="update"/>&nbsp;You think your grades are not fair? Why not to appeal :) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+</h2>
+</div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+ <!--<head><meta charset="UTF-8" http-equiv="refresh" content="0; url=CRUD-GradeBook-rnihalan-Netbeans/AddNew.html" /><title></title></head> -->
+<head>
+<style>
+input:focus {
+    background-color: yellow;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+<script type="text/javascript">
+ function idForm(){
+   var selectvalue = $('input[name=choice]:checked', '#idForm').val();
+if(selectvalue == "Instructor"){
+window.open('AddGradeitem.html','_self');
+return true;
+}
+else if(selectvalue == "Student"){
+window.open('AddStudent.html','_self');
+return true;
+}
+else if(selectvalue == "read" ){
+window.open('ReadGradebook.html','_self');
+return true;
+}
+else if(selectvalue == "update" ){
+window.open('UpdateGradeEntry.html','_self');
+return true;
+}
+else if(selectvalue == "delete_student" ){
+window.open('DeleteStudent.html','_self');
+return true;
+}
+else if(selectvalue == "delete_grade" ){
+	window.open('DeleteGrade.html','_self');
+	return true;
+	}
+else if(selectvalue == "delete_grade_item" ){
+	window.open('DeleteGradeItem.html','_self');
+	return true;
+	}
+return false;
+};
+</script>
+</head>
+<body><br><br>
+<div style="padding-left:10px;font-family: monospace;font-size: 25px;">
+<a href="index.html">HOME</a>
+</div>
+<div style="padding-left:100px;font-family: monospace;">
+<h2> INSTRUCTOR MODE ACTIVATED ! <br><br><br><u>Please choose the operation you want to perform</u> :<br /><br />
+<form id="idForm">1. CREATE : <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio"  onclick="idForm()" name="choice" value="Student"/>Add Student<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" onclick="idForm()"  name="choice" value="Instructor"/>Add Grade Item for all existing students&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<br>2. READ : <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio"  onclick="idForm()" name="choice" value="read"/>Read gradebook &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<br>3. UPDATE :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio"  onclick="idForm()" name="choice" value="update"/>Update a grade for a student with feedback&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<br>4. DELETE : <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio"  onclick="idForm()" name="choice" value="delete_student"/>Delete a student&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio"  onclick="idForm()" name="choice" value="delete_grade_item"/>Delete a Grade Item from all students&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio"  onclick="idForm()" name="choice" value="delete_grade"/>Delete a Grade for a specific student&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+</h2>
+</div>
+</form>
+
+</body>
+</html>

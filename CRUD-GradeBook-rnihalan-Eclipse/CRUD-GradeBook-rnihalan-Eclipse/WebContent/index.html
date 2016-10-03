@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+ <!--<head><meta charset="UTF-8" http-equiv="refresh" content="0; url=CRUD-GradeBook-rnihalan-Netbeans/AddNew.html" /><title></title></head> -->
+ <head>
+ <style>
+input:focus {
+    background-color: yellow;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+<script type="text/javascript">
+ function idForm(){
+   var selectvalue = $('input[name=choice]:checked', '#idForm').val();
+if(selectvalue == "Instructor"){
+window.open('CRUD_options_instructor.html','_self');
+return true;
+}
+else if(selectvalue == "Student"){
+window.open('CRUD_options_student.html','_self');
+return true;
+}
+return false;
+};
+
+
+</script>
+</head>   
+ 
+<body>
+<div style="padding-left:100px;font-family: monospace;"><h1><br><br>
+Please choose who you are :<br /><br />
+<form id="idForm">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" onclick="idForm()"  name="choice" value="Instructor"/>Instructor<br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio"  onclick="idForm()" name="choice" value="Student"/>Student &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</form>
+</h1>
+</div>
+</body> 
+
+</html>
